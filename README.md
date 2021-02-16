@@ -14,13 +14,21 @@
 
 `pcs:login {bduss} {stoken}`
 
+![登录截图](.github/screenshot/pcs-login.png)
+
 ## 浏览文件
 
 `pcs`
 
+![浏览目录](.github/screenshot/pcs-root.png)
+
+![浏览目录](.github/screenshot/pcs-dir.png)
+
 ## 搜索文件
 
 `pcs {keyword}`
+
+![搜索文件](.github/screenshot/pcs-search.png)
 
 ## 快捷键
 
