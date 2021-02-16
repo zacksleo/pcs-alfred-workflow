@@ -2,6 +2,14 @@
 
 百度网盘 Alfred workflow
 
+## 安装
+
+环境准备：`pip3 install BaiduPCS-Py`
+
+更多参考 [[https://github.com/PeterDing/BaiduPCS-Py]]
+
+下载Workflow并安装 [https://github.com/zacksleo/pcs-alfred-workflow/releases]
+
 ## 登录
 
 `pcs:login {bduss} {stoken}`
