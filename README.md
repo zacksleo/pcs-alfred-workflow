@@ -28,6 +28,8 @@
 
 `pcs {keyword}`
 
+![搜索文件](.github/screenshot/pcs-search-default.png)
+
 ![搜索文件](.github/screenshot/pcs-search.png)
 
 ## 快捷键
