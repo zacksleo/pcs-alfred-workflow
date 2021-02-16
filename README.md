@@ -16,7 +16,7 @@
 
 ![登录截图](.github/screenshot/pcs-login.png)
 
-## 浏览文件
+## 浏览目录
 
 `pcs`
 
