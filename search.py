@@ -50,11 +50,25 @@ def getFileSize(size):
     return human_size(size)
 
 
-def handleFiles(files):
+def handleFiles(query, files):
     items = []
 
     # PcsFile(path='/电影视频', is_dir=True, is_file=False, fs_id=950822986357574, size=0, md5=None, block_list=None, category=6, user_id=144138022, ctime=1519787106, mtime=1519787106, local_ctime=1519787106, local_mtime=1519787106, server_ctime=1519787106, server_mtime=1519787106, shared=None)
-
+    if query.startswith("/"):
+        paths = query.split("/")
+        path = "/" + "/".join(paths[0:len(paths)-1])
+        items.append({
+            "valid": "true",
+            "uid": 0,
+            "type": "default",
+            "title": "..",
+            "subtitle": "返回上级目录",
+            "arg": path,
+            "autocomplete": path,
+            "icon": {
+                "path": 'folder.png'
+            }
+        })
     for file in files:
         # print(file)
         items.append({
@@ -97,7 +111,7 @@ def run():
         files = api.list(query)
     else:
         files = api.search(query, "/", True)
-    handleFiles(files)
+    handleFiles(query, files)
 
 
 if __name__ == '__main__':
