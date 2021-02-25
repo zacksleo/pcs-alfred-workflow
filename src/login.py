@@ -1,10 +1,13 @@
 import json
 import sys
+import os
 
 bduss, stoken = sys.argv[1].split()
+if not os.path.isdir(os.getenv("alfred_workflow_cache")):
+    os.mkdir(os.getenv("alfred_workflow_cache"), mode=0o777)
 
 data = {'bduss': bduss, 'stoken': stoken}
-json.dump(data, open('token.json', 'w'))
+json.dump(data, open(os.getenv("alfred_workflow_cache") + '/token.json', 'w'))
 print(json.dumps({
     "items": [
         {
@@ -16,7 +19,8 @@ print(json.dumps({
             "icon": {
                 "type": "fileicon",
                 "path": "~/Desktop"
-            }
+            },
+            "autocomplete": ""
         }
     ]
 }))

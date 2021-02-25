@@ -115,7 +115,8 @@ def run():
 
 
 if __name__ == '__main__':
-    token = json.load(open('token.json', 'r'))
+    token = json.load(
+        open(os.getenv("alfred_workflow_cache") + '/token.json', 'r'))
     api = BaiduPCSApi(bduss=token['bduss'], cookies={
         "BDUSS": token['bduss'],
         "STOKEN": token['stoken']
