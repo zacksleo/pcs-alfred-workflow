@@ -81,10 +81,23 @@ def handleFiles(query, files):
             "autocomplete": file.path if file.is_dir else '',
             "icon": getIcon(file),
             "mods": {
+                "ctrl": {
+                    "valid": "true",
+                    "arg": str(file.fs_id),
+                    "subtitle": '使用客户端下载',
+                    "variables": {
+                        "fs_id": file.fs_id,
+                        "isdir": file.is_dir,
+                        "md5": file.md5 if file.md5 else '',
+                        "size": file.size,
+                        "server_path": file.path,
+                        "uk": file.user_id
+                    }
+                },
                 "shift": {
                     "valid": "true",
                     "arg": str(file.fs_id),
-                    "subtitle": '在客户端中打开'
+                    "subtitle": '在客户端中打开',
                 },
                 "alt": {
                     "valid": "true",

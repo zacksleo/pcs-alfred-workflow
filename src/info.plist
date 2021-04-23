@@ -32,9 +32,32 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>9E10FEF8-493A-41E7-9988-B01DDF14DE82</string>
+				<string>5D4887E2-1F46-4A3B-A63D-DE4C7B6A3C0F</string>
 				<key>modifiers</key>
 				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A035457-8AE0-4B16-80A8-3F76DF8B6AD4</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4A035457-8AE0-4B16-80A8-3F76DF8B6AD4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9E10FEF8-493A-41E7-9988-B01DDF14DE82</string>
+				<key>modifiers</key>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -144,6 +167,25 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>baiduyunguanjia://guanjia/noui</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>5D4887E2-1F46-4A3B-A63D-DE4C7B6A3C0F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -198,7 +240,7 @@
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
-				<string>baiduyunguanjia://evoked-download/?browserId={query}</string>
+				<string>baiduyunguanjia://evoked-download/?browserId={var:browserId}&amp;seq={query}</string>
 				<key>utf8</key>
 				<true/>
 			</dict>
@@ -208,6 +250,29 @@
 			<string>9E10FEF8-493A-41E7-9988-B01DDF14DE82</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/python3 download.py "{allvars}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4A035457-8AE0-4B16-80A8-3F76DF8B6AD4</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -219,7 +284,7 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 		<key>0F1BD418-FE4A-4E30-9E85-F131E03B0251</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>385</integer>
 			<key>ypos</key>
 			<integer>70</integer>
 		</dict>
@@ -233,25 +298,48 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 		<key>1C64A086-7EC8-4811-9E10-97EA7853D255</key>
 		<dict>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>230</integer>
+		</dict>
+		<key>4A035457-8AE0-4B16-80A8-3F76DF8B6AD4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>505</integer>
+		</dict>
+		<key>5D4887E2-1F46-4A3B-A63D-DE4C7B6A3C0F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>385</integer>
+			<key>ypos</key>
+			<integer>365</integer>
 		</dict>
 		<key>9E10FEF8-493A-41E7-9988-B01DDF14DE82</key>
 		<dict>
 			<key>xpos</key>
-			<integer>380</integer>
+			<integer>645</integer>
 			<key>ypos</key>
-			<integer>380</integer>
+			<integer>505</integer>
 		</dict>
 		<key>E29D4F1E-0744-47C0-BBD9-739FB5A8B824</key>
 		<dict>
 			<key>xpos</key>
-			<integer>55</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<integer>305</integer>
+			<integer>410</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>browserId</key>
+		<string>browserId</string>
+		<key>uk_unique</key>
+		<string>uk_unique</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
 	<string>1.0</string>
 	<key>webaddress</key>
