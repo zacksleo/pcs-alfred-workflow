@@ -8,6 +8,42 @@
 	<string>Tools</string>
 	<key>connections</key>
 	<dict>
+		<key>11A09E83-F5F7-4E0E-95BB-CC92A0692662</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>129F90CB-2F23-4585-94BE-ADF339E4EA3A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>129F90CB-2F23-4585-94BE-ADF339E4EA3A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FA2BC7CC-240F-4DDB-8AD0-4C7FE85DD353</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E11BEEA4-203A-43A3-B10A-640BA612E1C5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>1C64A086-7EC8-4811-9E10-97EA7853D255</key>
 		<array>
 			<dict>
@@ -47,6 +83,16 @@
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>11A09E83-F5F7-4E0E-95BB-CC92A0692662</string>
+				<key>modifiers</key>
+				<integer>8388608</integer>
+				<key>modifiersubtext</key>
+				<string>分享文件</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -235,25 +281,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string>baiduyunguanjia://evoked-download/?browserId={var:browserId}&amp;seq={query}</string>
-				<key>utf8</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>9E10FEF8-493A-41E7-9988-B01DDF14DE82</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -274,11 +301,166 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>baiduyunguanjia://evoked-download/?browserId={var:browserId}&amp;seq={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>9E10FEF8-493A-41E7-9988-B01DDF14DE82</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>我向你分享了[{var:var1}] 链接: {var:var2} 复制这段内容后打开百度网盘手机App，操作更方便哦</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>FA2BC7CC-240F-4DDB-8AD0-4C7FE85DD353</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/bin/python3 share.py</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>11A09E83-F5F7-4E0E-95BB-CC92A0692662</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>,</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>var</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>129F90CB-2F23-4585-94BE-ADF339E4EA3A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alignment</key>
+				<integer>0</integer>
+				<key>backgroundcolor</key>
+				<string></string>
+				<key>fadespeed</key>
+				<integer>0</integer>
+				<key>fillmode</key>
+				<integer>0</integer>
+				<key>font</key>
+				<string></string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>largetypetext</key>
+				<string>分享文件[{var:var1}] 链接: {var:var2}</string>
+				<key>textcolor</key>
+				<string></string>
+				<key>wrapat</key>
+				<integer>50</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>E11BEEA4-203A-43A3-B10A-640BA612E1C5</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>Keywords are one of Alfred's most commonly used and most useful ways of launching actions. Set a keyword and connect it to the action(s) you want to perform.
+	<string># pcs-alfred-workflow
 
-Type your keyword into Alfred, followed by your input text if needed, and you'll be on your way to boosting your productivity!</string>
+百度网盘 Alfred workflow
+
+## 安装
+
+环境准备：`pip3 install BaiduPCS-Py`
+
+下载 Workflow 并安装 [https://github.com/zacksleo/pcs-alfred-workflow/releases]
+
+## 登录
+
+1. 在网页版百度网盘登录成功后， 从 cookie 中分别 找到 BDUSS, STOKEN 做为以下输入
+
+2. `pcs:login {bduss} {stoken}`
+
+## 下载配置
+
+如何使用下载功能, 安装成功后, 在对应的 Workflow Enviroment Variables 中, 配置以下环境变量:
+
+| Name      | Value |
+| --------- | ----- |
+| browserId | -     |
+| uk_unique | -     |
+
+上面两个值可以在百度网盘网页中的 LocalStorage 中找到 (打开开发者工具, 依次找到Application-Storage-Local Storage)
+
+## 浏览目录
+
+`pcs`
+
+![浏览目录](.github/screenshot/pcs-root.png)
+
+![浏览目录](.github/screenshot/pcs-dir.png)
+
+## 搜索文件
+
+`pcs {keyword}`
+
+![搜索文件](.github/screenshot/pcs-search-default.png)
+
+![搜索文件](.github/screenshot/pcs-search.png)
+
+## 使用客户端下载
+
+## 快捷键
+
+1. 使用 Cmd, 在浏览器中打开
+2. 使用 Alt(Option), 在上级目录中打开
+3. 使用 Shift, 打开客户端
+4. 使用 Ctrl, 使用客户端下载</string>
 	<key>uidata</key>
 	<dict>
 		<key>0F1BD418-FE4A-4E30-9E85-F131E03B0251</key>
@@ -288,6 +470,13 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 			<key>ypos</key>
 			<integer>70</integer>
 		</dict>
+		<key>11A09E83-F5F7-4E0E-95BB-CC92A0692662</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>665</integer>
+		</dict>
 		<key>124AFB05-E307-4E64-BA04-E03D41EC58AE</key>
 		<dict>
 			<key>xpos</key>
@@ -295,10 +484,17 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 			<key>ypos</key>
 			<integer>230</integer>
 		</dict>
+		<key>129F90CB-2F23-4585-94BE-ADF339E4EA3A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>630</integer>
+			<key>ypos</key>
+			<integer>725</integer>
+		</dict>
 		<key>1C64A086-7EC8-4811-9E10-97EA7853D255</key>
 		<dict>
 			<key>xpos</key>
-			<integer>70</integer>
+			<integer>65</integer>
 			<key>ypos</key>
 			<integer>230</integer>
 		</dict>
@@ -323,6 +519,13 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 			<key>ypos</key>
 			<integer>505</integer>
 		</dict>
+		<key>E11BEEA4-203A-43A3-B10A-640BA612E1C5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>790</integer>
+		</dict>
 		<key>E29D4F1E-0744-47C0-BBD9-739FB5A8B824</key>
 		<dict>
 			<key>xpos</key>
@@ -330,13 +533,20 @@ Type your keyword into Alfred, followed by your input text if needed, and you'll
 			<key>ypos</key>
 			<integer>410</integer>
 		</dict>
+		<key>FA2BC7CC-240F-4DDB-8AD0-4C7FE85DD353</key>
+		<dict>
+			<key>xpos</key>
+			<integer>775</integer>
+			<key>ypos</key>
+			<integer>650</integer>
+		</dict>
 	</dict>
 	<key>variables</key>
 	<dict>
 		<key>browserId</key>
-		<string>browserId</string>
+		<string>9436efa061fe4a4f33ab57721aef803c0384c84dfb6b1d87</string>
 		<key>uk_unique</key>
-		<string>uk_unique</string>
+		<string>1594648648</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>

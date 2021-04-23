@@ -91,7 +91,6 @@ def handleFiles(query, files):
                         "md5": file.md5 if file.md5 else '',
                         "size": file.size,
                         "server_path": file.path,
-                        "uk": file.user_id
                     }
                 },
                 "shift": {
@@ -109,6 +108,15 @@ def handleFiles(query, files):
                     "arg": file.path if file.is_dir else "/".join(file.path.split("/")[:-1]),
                     "subtitle": '在网页中打开'
                 },
+                "fn": {
+                   "valid": "true",
+                    "subtitle": '分享文件',
+                    "variables": {
+                        "name": getFileName(file.path),
+                        "isdir": file.is_dir,
+                        "server_path": file.path,
+                    }
+                }
             },
         })
 
